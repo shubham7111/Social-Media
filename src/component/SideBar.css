@@ -1,0 +1,37 @@
+.sidebar-parent-container{
+    display: flex;
+    flex-direction: row;
+    gap : 1rem;
+    background-color: pink;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    /* height: auto; */
+    /* min-height:70vh */
+
+}
+
+.sidebar-left-container{
+    height: 90vh;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    /* gap : 16rem; */
+    width: 20%;
+    text-decoration: none;
+}
+    
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar-centre-container{
+    width: 50%;
+    border: 1px solid black;
+  
+}
+
+.sidebar-right-container{
+   
+}

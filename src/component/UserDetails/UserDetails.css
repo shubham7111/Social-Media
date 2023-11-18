@@ -1,0 +1,26 @@
+.user-container{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+   height: 600px;
+    color:black;
+    text-decoration: none;
+   border:none;
+   justify-content: space-around;
+    flex-wrap: wrap;
+   box-shadow: 4px 3px 8px 1px #969696;  
+}
+
+
+.user-container-child{
+    display: flex;
+    gap : 0.5rem;
+    width: 250px;
+    justify-content: space-around;
+    box-shadow: 4px 3px 8px 1px #969696;  
+    flex-wrap: wrap;
+}
+
+.user-container-child img{
+    border-radius: 50%;
+}
