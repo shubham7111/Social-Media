@@ -6,7 +6,7 @@ import { Card } from '../component/Card/Card'
 const BookMark = () => {
   const {state : {bookmark, posts},getPost} = useContext(ExploreKey)
   const {state : {userInfo}} = useContext(AuthKey)
-  console.log(bookmark)
+  
   useEffect(()=> {
     getPost()
   }, [posts, userInfo, bookmark])

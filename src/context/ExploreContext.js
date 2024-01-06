@@ -13,7 +13,7 @@ const ExploreContext = ({children}) => {
     const navigate =  useNavigate()
     const {state : {token, userInfo}} = useContext(AuthKey)
     const [state, postDispatch] = useReducer(ExploreReducer, initialStatePosts)
-    
+    //console.log(userInfo)
 
     const getPost =  async() => {
         
@@ -22,7 +22,7 @@ const ExploreContext = ({children}) => {
             const finalReponse = await response.json()
             //localStorage.setItem("Post" , JSON.stringify(finalReponse.posts))
             
-            postDispatch({type : "GET-POSTS" , payload : finalReponse.posts})
+            postDispatch({type : "FETCH_POSTS_SUCCESS" , payload : finalReponse.posts})
             
         } catch (error) {
             
@@ -156,8 +156,56 @@ const ExploreContext = ({children}) => {
             toast("UNBookmark Post")
         }
     }
+    const createPost = async (post) => {
+        try {
+            const passobj = {postData : post}
+            //console.log(post)
+            const response = await fetch("/api/posts", {method : "POST", headers : { Accept : "application/json", "Content-Type" : "application/json", authorization : token}, body : JSON.stringify(passobj),})
+            //console.log(response, response.status)
+            if(response.status === 201) {
+                const {posts} = await response.json() 
+                //console.log(posts)
+                postDispatch({type : "CREATE-POST" , payload : posts})
+                toast.success("Post added successfully")
+            }
+            
+        } catch (error) {
+            
+        }
+    }
+    const deletePost = async (post) => {
+        try {
+            console.log(post)
+            //const passobj = {postData : post}
+            const response  = await fetch(`/api/posts/${post._id}`, {method : "DELETE", headers : {Accept : "application/json", "Content-Type" : "application/json", authorization : token}, })
+            console.log(response.status)
+            if (response.status === 201 ) {
+                const {posts} = await response.json()
+                postDispatch({type : "DELETE-POST" , payload : posts})
+                toast.success("Post deleted successfully")
+            }
+        } catch (error) {
+            
+        }
+    }
+    const editPost = async (postid,post) => {
+        try {
+            const passobj = {postData : post}
+            const response  = await fetch(`/api/posts/edit/${postid}`, {method : "POST", headers : {Accept : "application/json", "Content-Type" : "application/json", authorization : token}, body : JSON.stringify(passobj), })
+            console.log(response.status, token, post)
+            if (response.status ===  201){
+                const {posts} =  await response.json()
+                console.log(posts)
+                postDispatch({type : "EDIT-POST", payload : posts})
+                toast.success("Post edited successfully")
+            }
+
+        } catch (error) {
+            
+        }
+    }
     // useEffect(() => { getPost()}, [] )
-    const valuetobepassed = {state, getPost, likedPost, isLiked, unLikedPost, isBookmark, unBookmarkPost, bookmarkPost, bookMarkPostHandler}
+    const valuetobepassed = {state, getPost, likedPost, isLiked, unLikedPost, isBookmark, unBookmarkPost, bookmarkPost, bookMarkPostHandler, createPost, editPost, deletePost}
   return (
     <ExploreKey.Provider value = {valuetobepassed}>{children}</ExploreKey.Provider>
   )

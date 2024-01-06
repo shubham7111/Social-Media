@@ -13,6 +13,9 @@ import { AuthKey } from './context/AuthContext';
 import SideBar from './component/SideBar';
 import LoginPage from './pages/LoginPage';
 import Navigation from './component/Navigation/Navigation';
+import SignUp from './pages/SignUp/SignUp';
+import Feed from './pages/Feed/Feed';
+import { RequiresAuth } from './component/RequiresAuth/RequiresAuth';
 
 function App() {
   const {state : {userInfo}} = useContext(AuthKey)
@@ -38,23 +41,25 @@ function App() {
         containerStyle={{ top: "10%" }}
         toastOptions={{ style: { maxWidth: 500 } }}
       />
-      <h1>Social Media {userInfo?.firstName}</h1>
-      <NavLink to="/explore">Explore</NavLink>
+      {/* <h1>Social Media {userInfo?.firstName}</h1> */}
+      {/* <NavLink to="/explore">Explore</NavLink>
         <NavLink to="/bookmark">Bookmark</NavLink>
         <NavLink to="/likedpost">Liked Post</NavLink>
-        <NavLink to="/profile">Profile</NavLink>
+        <NavLink to="/profile/user/:username">Profile</NavLink> */}
         <Navigation />
       <Routes>
         <Route path = "/login" element = {<LoginPage />} />
-      </Routes>
-      <Routes>
-      <Route  element={<SideBar />}>
+        <Route path = "/signup" element = {<SignUp />} />
+        <Route path="/logout" />
+        <Route  element={<SideBar />}>
         {/* <Route path = "/" element = {<Home/>} /> */}
-        <Route path = "/explore" element = {<Explore/>} />
+        <Route path = "/" element = {<RequiresAuth><Feed/></RequiresAuth>} />
+        <Route path = "/explore" element = {<RequiresAuth><Explore/></RequiresAuth>} />
         <Route path = "/bookmark" element = {<BookMark/>} />
         <Route path = "/likedpost" element = {<LikedPost/>} />
-        <Route path = "/profile" element = {<Profile/>} />
+        <Route path = "/profile/user/:username" element = {<Profile/>} />
       </Route>
+
       </Routes>
     </div>
   );

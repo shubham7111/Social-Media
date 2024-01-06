@@ -19,6 +19,22 @@ export const getAllUsersHandler = function () {
  * send GET Request at /api/users/:userId
  * */
 
+// export const getUserHandler = function (schema, request) {
+//   const username = request.params.username;
+//   try {
+//     const user = schema.users.findBy({ username: username }).attrs;
+//     return new Response(200, {}, { user });
+//   } catch (error) {
+//     return new Response(
+//       500,
+//       {},
+//       {
+//         error,
+//       }
+//     );
+//   }
+// };
+
 export const getUserHandler = function (schema, request) {
   const username = request.params.username;
   try {
@@ -34,7 +50,6 @@ export const getUserHandler = function (schema, request) {
     );
   }
 };
-
 /**
  * This handler handles updating user details.
  * send POST Request at /api/users/edit

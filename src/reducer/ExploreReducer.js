@@ -1,12 +1,14 @@
 export const initialStatePosts = {
     // posts : localStorage.getItem("Post") ? JSON.parse(localStorage.getItem('Post')) : []
     posts : [],
-    bookmark : []
+    bookmark : [], 
+    loading : false,
+    error : null
 }
 
 const ExploreReducer = (state, action) => {
     switch(action.type) {
-        case "GET-POSTS" :
+        case "FETCH_POSTS_SUCCESS" :
             
             return {...state, posts : action.payload}
         case "LIKED-POST" :
@@ -35,6 +37,12 @@ const ExploreReducer = (state, action) => {
 
             return {...state, bookmark : filteredBookmark, posts : filteredBookmarkPost}
 
+        case "CREATE-POST" :
+            return {...state , posts : action.payload}
+        case "DELETE-POST" :
+            return {...state , posts : action.payload}
+        case "EDIT-POST" :
+            return {...state , posts : action.payload}
         default :
             return state
     }

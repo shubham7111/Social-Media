@@ -14,8 +14,8 @@ import { formatDate } from "../utils/authUtils";
 export const users = [
   {
     _id: 2,
-    firstName: "Adarsh",
-    lastName: "Balika",
+    firstname: "Adarsh",
+    lastname: "Balika",
     username: "adarshbalika",
     password: "adarshBalika123",
     bio: "Frontend Developer 💻✨Turning ideas into beautiful and interactive websites✨🚀",
@@ -25,8 +25,8 @@ export const users = [
     following: [
       {
         _id: 3,
-        firstName: "Shweta",
-        lastName: "Jha",
+        firstname: "Shweta",
+        lastname: "Jha",
         username: "shwetaj",
         password: "shweta@123",
         bio: "Learning React💻✨ by building projects",
@@ -40,8 +40,8 @@ export const users = [
       },
       {
         _id: 4,
-        firstName: "Alice",
-        lastName: "Jones",
+        firstname: "Alice",
+        lastname: "Jones",
         username: "alicejohnson",
         password: "alice123",
         bio: "Software Developer 👩‍💻💡.Passionate about technology and creating innovative software 🌟🚀",
@@ -59,8 +59,8 @@ export const users = [
   },
   {
     _id: 3,
-    firstName: "Shweta",
-    lastName: "Jha",
+    firstname: "Shweta",
+    lastname: "Jha",
     username: "shwetaj",
     password: "shweta@123",
     bio: "Learning React💻✨ by building projects",
@@ -72,8 +72,8 @@ export const users = [
     followers: [
       {
         _id: 2,
-        firstName: "Adarsh",
-        lastName: "Balika",
+        firstname: "Adarsh",
+        lastname: "Balika",
         username: "adarshbalika",
         password: "adarshBalika123",
         bio: "Frontend Developer 💻✨Turning ideas into beautiful and interactive websites✨🚀",
@@ -90,8 +90,8 @@ export const users = [
 
   {
     _id: 4,
-    firstName: "Alice",
-    lastName: "Jones",
+    firstname: "Alice",
+    lastname: "Jones",
     username: "alicejohnson",
     password: "alice123",
     bio: "Software Developer 👩‍💻💡.Passionate about technology and creating innovative software 🌟🚀",
@@ -104,8 +104,8 @@ export const users = [
     followers: [
       {
         _id: 2,
-        firstName: "Adarsh",
-        lastName: "Balika",
+        firstname: "Adarsh",
+        lastname: "Balika",
         username: "adarshbalika",
         password: "adarshBalika123",
         bio: "Frontend Developer 💻✨Turning ideas into beautiful and interactive websites✨🚀",
@@ -119,8 +119,8 @@ export const users = [
   },
   {
     _id: 5,
-    firstName: "Bob",
-    lastName: "Smith",
+    firstname: "Bob",
+    lastname: "Smith",
     username: "bobsmith",
     password: "bob123",
     bio: "Web Designer 🎨🌈.Creating digital masterpieces with colors and imagination🎨✨",
@@ -133,8 +133,8 @@ export const users = [
   },
   {
     _id: 6,
-    firstName: "Emma",
-    lastName: "Davis",
+    firstname: "Emma",
+    lastname: "Davis",
     username: "emmadavis",
     password: "emma123",
     bio: "Photographer 📷✨Capturing moments that tell stories.Exploring the world through a lens. Join me on this visual journey! 🌍✨",
@@ -148,8 +148,8 @@ export const users = [
 
   {
     _id: 8,
-    firstName: "Lily",
-    lastName: "Anderson",
+    firstname: "Lily",
+    lastname: "Anderson",
     username: "lilyanderson",
     password: "lily123",
     bio: "Graphic Designer 🎨✏️\nFrom pixels to perfection! ✨🌟",
@@ -160,10 +160,24 @@ export const users = [
     createdAt: "2022-03-01T09:00:00+05:30",
     updatedAt: formatDate(),
   },
+  {
+    _id: 8,
+    firstname: "Shubham",
+    lastname: "Karmokar",
+    username: "shubhamkarmokar",
+    password: "sk123",
+    bio: "Software Engineer 😵‍💫",
+    bookmarks: [],
+    avatarUrl:
+      "https://robohash.org/d2d682bd05529b78def59bfa29f9562c?set=set4&bgset=&size=400x400",
+    website: "https://www.linkedin.com/in/shubham-karmokar-42baa8122/",
+    createdAt: "2022-03-01T09:00:00+05:30",
+    updatedAt: formatDate(),
+  },
   // {
   //   _id: 9,
-  //   firstName: "Oliver",
-  //   lastName: "Taylor",
+  //   firstname: "Oliver",
+  //   lastname: "Taylor",
   //   username: "olivertaylor",
   //   password: "oliver123",
   //   bio: "Travel Blogger ✈️🌍\nExploring the world, one adventure at a time 🗺️✨",
@@ -176,8 +190,8 @@ export const users = [
   // },
   // {
   //   _id: 10,
-  //   firstName: "Sophie",
-  //   lastName: "Clark",
+  //   firstname: "Sophie",
+  //   lastname: "Clark",
   //   username: "sophieclark",
   //   password: "sophie123",
   //   bio: "Fitness Enthusiast 💪🏋️‍♀️🌱\nEmpowering and inspiring others to lead a healthy and balanced lifestyle💚✨",

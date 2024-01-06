@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { ExploreKey } from '../context/ExploreContext'
 import {AiFillLike} from 'react-icons/ai'
 import {BsFillBookmarkFill} from 'react-icons/bs'
@@ -13,7 +13,7 @@ import BookMark from './BookMark'
 import Profile from './Profile'
 import SideBar from '../component/SideBar'
 import { Card } from '../component/Card/Card'
-
+import {CircleLoader} from "react-spinners"
 const Explore = () => {
     //const { getPost} = useContext(ExploreKey)
     const {getPost, state : {posts}, state, likedPost, isLiked, unLikedPost, isBookmark, bookmarkPost, unBookmarkPost} = useContext(ExploreKey)
@@ -21,21 +21,26 @@ const Explore = () => {
     
     //const {likedPost, isLiked, unLikedPost} = useContext(LikeKey)
     const {state: {userInfo}} = useContext(AuthKey)
+    const [loading, setLoading] = useState(false)
     let feedPosts = posts
+     //console.log(userInfo)
     let userDetail
     useEffect(() => { 
-      
-      getPost()}, [posts, state] )
-
+      setLoading(true)
+      getPost()
+      setLoading(false)
+    }, [posts, state] )
+    const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
       
       
   return (
     <div className= "parent-container-posts">
     
     <div className="post-container">
-   
+    
+    {loading && <div style={style}> <CircleLoader color="#123abc" /> </div>}
     {
-      feedPosts?.map((post, id) => <Card post = {post} key = {id}/>
+      !loading && feedPosts?.map((post, id) => <Card post = {post} key = {id}/>
         )
     }
     </div>
