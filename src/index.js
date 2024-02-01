@@ -20,7 +20,7 @@ root.render(
   <AuthContext>
   <ExploreContext>
   <UserContext>
-    <App />s
+    <App />
     </UserContext>
     </ExploreContext>
     </AuthContext>

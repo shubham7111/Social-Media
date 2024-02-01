@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useState } from 'react'
 import { ExploreKey } from '../context/ExploreContext'
 import {AiFillLike} from 'react-icons/ai'
 import {BsFillBookmarkFill} from 'react-icons/bs'
-import './Explore.css'
-
+// import './Explore.css'
+import '../component/Card/Card.css'
 import { AuthKey } from '../context/AuthContext'
 import { UserKey } from '../context/UserContext'
 import {PostUserSection} from '../component/PostUserSection'
@@ -34,9 +34,9 @@ const Explore = () => {
       
       
   return (
-    <div className= "parent-container-posts">
     
-    <div className="post-container">
+    
+    <div className="posts-parent-container">
     
     {loading && <div style={style}> <CircleLoader color="#123abc" /> </div>}
     {
@@ -45,7 +45,7 @@ const Explore = () => {
     }
     </div>
     
-    </div>
+  
   )
 }
 

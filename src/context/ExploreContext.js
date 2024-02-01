@@ -117,7 +117,7 @@ const ExploreContext = ({children}) => {
           authorization : token,
       },
   })
-  console.log(sendReq)
+  //console.log(sendReq)
       if (sendReq.status === 201) {
           const {posts} = await sendReq.json()
           const users = posts
@@ -135,7 +135,7 @@ const ExploreContext = ({children}) => {
   }
   // isLiked -true =---> Logged user ne post Like kiya Haii
   const isLiked = (postId) => {
-      console.log(state?.posts?.find((post) => post._id === postId)?.likes?.likedBy.some((user) => user.username === userInfo.username), '98')
+    //   console.log(state?.posts?.find((post) => post._id === postId)?.likes?.likedBy.some((user) => user.username === userInfo.username), '98')
       return state?.posts?.find((post) => post._id === postId)?.likes?.likedBy.some((user) => user.username === userInfo.username);
   }
 

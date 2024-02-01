@@ -19,3 +19,123 @@
     border-radius: 50%;
     margin: 0 5px;
 } */
+
+/* //all parent's styling logic */
+.posts-parent-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.post-container {
+  min-height: 30vh;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 7px gray;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  /* overflow: hidden; */
+  flex-wrap: wrap;
+}
+
+/* //parent styling */
+
+.card-child1 {
+  display: flex;
+  flex-direction: row;
+  min-height: 5vh;
+  display: flex;
+  width: 100%;
+  position: relative;
+
+  background-color: white;
+}
+.card-child2 {
+  display: flex;
+  flex-direction: column;
+  /* background-color: pink; */
+  row-gap: 0.5rem;
+}
+/* Top mini ection details -Parent - */
+
+/* .User-profile-picture > img {
+  width: 2em;
+  height: 2em;
+  border-radius: 100%;
+  margin: 15px 5px;
+  margin-right: 20px;
+} */
+.user-profile-img {
+  width: 2em;
+  height: 2em;
+  border-radius: 100%;
+  margin: 15px 5px;
+  margin-right: 20px;
+}
+.user-details-info:hover {
+  cursor: pointer;
+}
+.user-details-info {
+  width: fit-content;
+}
+
+/* to bring the three dots at right side of top div */
+/* 1.   position: relative; to parent */
+.card-child1 {
+  position: relative;
+}
+.drop-down {
+  right: 0;
+  position: absolute;
+}
+
+.options {
+  background-color: white;
+  box-shadow: 0px 0px 7px gray;
+  border-radius: 10%;
+  right: 0;
+  position: absolute;
+  min-width: 80px;
+  right: 10px;
+  top: 12px;
+}
+
+.options .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.options .menu:hover {
+  cursor: pointer;
+}
+.options .menu li {
+  border: 0.5px solid black;
+}
+
+.post-image {
+  height: 100%;
+  width: 100%;
+  /* background-color: green; */
+}
+
+.message {
+  width: 90%;
+  margin-left: 1.5rem;
+}
+
+.action-btn span:hover {
+  cursor: pointer;
+}
+.action-btn {
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.icon {
+  padding: 5px;
+  margin: 2px;
+}

@@ -1,37 +1,97 @@
-.sidebar-parent-container{
-    display: flex;
-    flex-direction: row;
-    gap : 1rem;
-    background-color: pink;
-    justify-content: space-between;
-    width: 100%;
-    flex-wrap: wrap;
-    /* height: auto; */
-    /* min-height:70vh */
-
+/* */
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
-.sidebar-left-container{
-    height: 90vh;
-    background-color: grey;
-    display: flex;
-    flex-direction: column;
-    /* gap : 16rem; */
-    width: 20%;
-    text-decoration: none;
-}
-    
-.link{
-    text-decoration: none;
-    color: black;
+.main-div {
+  display: flex;
+  flex-direction: row;
 }
 
-.sidebar-centre-container{
-    width: 50%;
-    border: 1px solid black;
-  
+.sidebar-centre-container {
+  width: 60%;
 }
 
-.sidebar-right-container{
-   
+.sidebar-left-container {
+  width: 20%;
+  /* border-right: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90vh;
+  text-align: center;
+  position: sticky;
+  inset: 10% 0 0 0;
+  padding-top: 2rem;
+  background-color: bisque;
+}
+.sidebar-left-container {
+  margin-left: 2rem;
+}
+
+.sidebar-left-container li:hover {
+  cursor: pointer;
+}
+.sidebar-right-container {
+  padding-top: 2rem;
+  right: 0;
+  /* border-left: 1px solid black; */
+  width: 25%;
+  position: sticky;
+  inset: 10% 0 0 0;
+  margin-left: 2rem;
+  max-height: 70vh;
+  min-height: 10vh;
+}
+/* css for Navbar.jsx */
+.navBar_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 10vh;
+  background-color: grey;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-shadow: 0 0 2px;
+  position: sticky;
+  inset: 0 0 100% 0;
+  z-index: 90;
+}
+.navBar_div h1 {
+  margin-top: 0.5rem;
+}
+.links {
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+  font-weight: 600;
+}
+.active-link,
+.link {
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.active-link {
+  background-color: grey;
+}
+/* .sidebar-left-container {
+  background-color: #333; 
+} */
+
+.sidebar-left-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-nav li {
+  /* Float removed */
+}
+
+.sidebar-left-container li .active-link {
+  background-color: #4caf50; /* Background color of active link */
 }
