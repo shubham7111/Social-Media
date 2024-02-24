@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./UserDetails.css";
 import { UserKey } from "../../context/UserContext";
-import { User } from "../User/User";
+import { User } from "../user/User";
 import { AuthKey } from "../../context/AuthContext";
 export const UserDetails = () => {
   const [input, setInput] = useState("");

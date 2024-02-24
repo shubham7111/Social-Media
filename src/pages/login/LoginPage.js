@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { AuthKey } from "../context/AuthContext";
+import { AuthKey } from "../../context/AuthContext";
 import "./LoginPage.css";
 import { toast } from "react-toastify";
 import { NavLink } from "react-router-dom";

@@ -9,47 +9,56 @@ body {
   width: 100%;
 }
 
-/* dd */
-/* css for navlink logic -> */
-
-/* body {
-  margin: 0px;
-  padding: 0px;
-} */
-/* .main-wrapper {
-  display: flex;
-  flex-direction: column;
-  column-gap: 2rem;
-} */
-
-.navbar {
+.navbar-parent-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: grey;
   padding: 1rem;
   width: 100%;
-  /* border: 1px solid brown; */
+  /* z-index: 90; */
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  margin-bottom: 1rem;
+  /* background-color: grey; */
 }
-.menubar {
+
+.logo .socio-header {
+  font-weight: 700;
+  font-size: 30px;
+  color: grey;
+}
+.logo .gram-header {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.navbar-parent-container .logo .nav-item {
+  text-decoration: none;
+  color: black;
+}
+
+/* //right menu bar */
+.navbar-parent-container .menubar-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-right: 2rem;
+  align-self: flex-end;
+  column-gap: 3rem;
+  /* background-color: orange; */
 }
 
-.nav-item,
-.nav-item-active {
+.menubar-container .nav-item {
   text-decoration: none;
   color: black;
-  padding: 1rem;
-  font-weight: 600;
 }
-/* {
-  color: bro;
-} */
-.nav-item:hover,
-.nav-item-active {
-  color: brown;
-  cursor: pointer;
+
+.menubar-container .nav-item-user {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
 }

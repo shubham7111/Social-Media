@@ -1,29 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { makeServer } from './server'
-import { BrowserRouter } from 'react-router-dom';
-import AuthContext from './context/AuthContext';
-import ExploreContext from './context/ExploreContext';
-import LikedPost from './pages/LikedPost';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { makeServer } from "./server";
+import { BrowserRouter } from "react-router-dom";
+import AuthContext from "./context/AuthContext";
+import ExploreContext from "./context/ExploreContext";
+import LikedPost from "./pages/likedpost/LikedPost";
 
-import UserContext from './context/UserContext';
+import UserContext from "./context/UserContext";
 
 // Call make Server
-makeServer()
-const root = ReactDOM.createRoot(document.getElementById('root'));
+makeServer();
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-  <BrowserRouter>
-  <AuthContext>
-  <ExploreContext>
-  <UserContext>
-    <App />
-    </UserContext>
-    </ExploreContext>
-    </AuthContext>
+    <BrowserRouter>
+      <AuthContext>
+        <ExploreContext>
+          <UserContext>
+            <App />
+          </UserContext>
+        </ExploreContext>
+      </AuthContext>
     </BrowserRouter>
   </React.StrictMode>
 );

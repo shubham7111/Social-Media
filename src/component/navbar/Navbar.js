@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import LoginPage from "../pages/LoginPage";
+import LoginPage from "../../pages/login/LoginPage";
 
-function Home() {
+function Navbar() {
   return (
     <div>
       <p>
@@ -22,4 +22,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Navbar;

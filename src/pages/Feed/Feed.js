@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { AuthKey } from "../../context/AuthContext";
 import { ExploreKey } from "../../context/ExploreContext";
-import { Card } from "../../component/Card/Card";
+import { Card } from "../../component/card/Card";
 
 const Feed = () => {
   const {

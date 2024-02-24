@@ -1,21 +1,21 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { NavLink, Route, Routes } from "react-router-dom";
-import Explore from "./pages/Explore";
-import BookMark from "./pages/BookMark";
-import LikedPost from "./pages/LikedPost";
-import Profile from "./pages/Profile";
-import Home from "./component/Home";
+import Explore from "./pages/explore/Explore";
+import BookMark from "./pages/bookmark/BookMark";
+import LikedPost from "./pages/likedpost/LikedPost";
+import Profile from "./pages/profile/Profile";
+import Navbar from "./component/navbar/Navbar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useContext } from "react";
 import { AuthKey } from "./context/AuthContext";
-import SideBar from "./component/SideBar";
-import LoginPage from "./pages/LoginPage";
-import Navigation from "./component/Header/Header";
+import SideBar from "./component/sidebar/SideBar";
+import LoginPage from "./pages/login/LoginPage";
+import Header from "./component/header/Header";
 import SignUp from "./pages/SignUp/SignUp";
 import Feed from "./pages/Feed/Feed";
-import { RequiresAuth } from "./component/RequiresAuth/RequiresAuth";
+import { RequiresAuth } from "./component/requiresAuth/RequiresAuth";
 
 function App() {
   const {
@@ -49,6 +49,7 @@ function App() {
         <NavLink to="/likedpost">Liked Post</NavLink>
         <NavLink to="/profile/user/:username">Profile</NavLink> */}
       {/* <Navigation /> */}
+      <Header />
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUp />} />

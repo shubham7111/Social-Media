@@ -1,17 +1,16 @@
 import React, { useContext, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import "./SideBar.css";
-import { UserDetails } from "./UserDetails/UserDetails";
-import UserContext, { UserKey } from "../context/UserContext";
-import { AuthKey } from "../context/AuthContext";
+import { UserDetails } from "../userDetails/UserDetails";
+import UserContext, { UserKey } from "../../context/UserContext";
+import { AuthKey } from "../../context/AuthContext";
 import { CgProfile } from "react-icons/cg";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { AiOutlineHome } from "react-icons/ai";
 import { AiOutlineRocket } from "react-icons/ai";
 import { BsBookmark } from "react-icons/bs";
-import CreateNewPost from "../pages/CreateNewPostModal/CreateNewPostModal";
-import Header from "./Header/Header";
+import CreateNewPost from "../createNewPostModal/CreateNewPostModal";
 const SideBar = () => {
   const {
     state: { userInfo },
@@ -50,9 +49,6 @@ const SideBar = () => {
   const [activeId, setActiveId] = useState("Feed");
   return (
     <div className="sidebar-parent-container">
-      <div className="navBar_div">
-        <Header />
-      </div>
       <div className="main-div">
         <div className="sidebar-left-container">
           <ul>

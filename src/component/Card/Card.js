@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { PostUserSection } from "../PostUserSection";
+import { PostUserSection } from "../postUserSection/PostUserSection";
 import { AiFillLike } from "react-icons/ai";
 import { BsFillBookmarkFill } from "react-icons/bs";
 import { ExploreKey } from "../../context/ExploreContext";
-import EditPostModal from "../../pages/EditPostModal/EditPostModal";
+import EditPostModal from "../editPostModal/EditPostModal";
 import "./Card.css";
 import { BiCommentAdd } from "react-icons/bi";
 import { AiOutlineLike, AiTwotoneLike } from "react-icons/ai";

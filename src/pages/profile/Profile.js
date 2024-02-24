@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
-import { UserKey } from "../context/UserContext";
-import { AuthKey } from "../context/AuthContext";
-import Modal from "./modal/Modal";
+import { UserKey } from "../../context/UserContext";
+import { AuthKey } from "../../context/AuthContext";
+import Modal from "../../component/modal/Modal";
 import { useParams } from "react-router-dom";
-import Explore from "./Explore";
-import { ExploreKey } from "../context/ExploreContext";
-import { Card } from "../component/Card/Card";
+import Explore from "../explore/Explore";
+import { ExploreKey } from "../../context/ExploreContext";
+import { Card } from "../../component/card/Card";
 import "./Profile.css";
 const Profile = () => {
   const {
