@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { v4 as uuid } from "uuid";
-import "./CreateNewPostModal.css";
+import "./modal.css";
 import { MdOutlinePhotoCamera } from "react-icons/md";
 import { ExploreKey } from "../../context/ExploreContext";
 import { TbLetterX } from "react-icons/tb";
-
 const CreateNewPost = ({ showClose, showOpen }) => {
   const { createPost } = useContext(ExploreKey);
   const inputRef = useRef();
@@ -30,10 +29,7 @@ const CreateNewPost = ({ showClose, showOpen }) => {
     createdAt: "",
   });
   const setInputHandler = (e) => {
-    //console.log(e.target.value)
     setInput((input) => ({ ...input, [e.target.name]: e.target.value }));
-
-    //console.log(updateUserInfo, e.target.name, e.target.value)
   };
   const clickHandler = (e) => {
     e.preventDefault();
@@ -60,13 +56,20 @@ const CreateNewPost = ({ showClose, showOpen }) => {
   }, []);
   return (
     <div>
-      <div className="modal-wrapper" onClick={closeModalHandler}></div>
+      <div
+        className="modal-wrapper"
+        style={{ backgroundColor: "yellow" }}
+        onClick={closeModalHandler}
+      ></div>
       <div className="modal-container" onClick={closeModalHandler}>
         <div className="modal">
-          <div className="close" onClick={showClose}>
+          <div>
             {" "}
-            x
+            <button className="cancel-btn" onClick={showClose}>
+              &times;
+            </button>
           </div>
+
           <form className="profile-modal-form">
             <h1>Add a post</h1>
             <div className="form-group">
@@ -77,14 +80,25 @@ const CreateNewPost = ({ showClose, showOpen }) => {
               ></textarea>
             </div>
             <div>
-              {input.mediaURL ? (
+              {input?.mediaURL ? (
                 <div>
-                  <img src={input.mediaURL} />
+                  <img
+                    className="post-image-create-modal"
+                    style={{
+                      height: "100px",
+                      width: "100px",
+                      marginLeft: "20px",
+                    }}
+                    src={input?.mediaURL}
+                  />
                   <TbLetterX size={20} onClick={setUpdatedPostImageHandler} />
                 </div>
               ) : (
-                <div>
-                  <MdOutlinePhotoCamera onClick={ImageClickHandler} />
+                <div className="image-uploaded-container">
+                  <MdOutlinePhotoCamera
+                    className="cancel-image"
+                    onClick={ImageClickHandler}
+                  />
 
                   <input
                     type="file"
@@ -98,7 +112,11 @@ const CreateNewPost = ({ showClose, showOpen }) => {
                 </div>
               )}
             </div>
-            <button onClick={clickHandler}>Create</button>
+            <div>
+              <button className="btn" onClick={clickHandler}>
+                Create
+              </button>
+            </div>
           </form>
         </div>
       </div>

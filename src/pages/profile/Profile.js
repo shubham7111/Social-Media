@@ -33,10 +33,8 @@ const Profile = () => {
       setUsersLoading(true);
       const request = await fetch(`/api/users/${username}`);
       const response = await request.json();
-      //console.log(username,response, request)
       if (request.status === 200 || request.status === 201) {
         setUserData(response.user);
-        //console.log(response, 'ysgffhdffj')
         getAllUserPostHandler(username);
         setUsersLoading(false);
       }
@@ -47,41 +45,77 @@ const Profile = () => {
   useEffect(() => {
     getUserDetails();
   }, [username, user, state, profileBasedPosts]);
-  // console.log(userData)
   return (
-    <div>
+    <div className="profile-container-wrapper">
       <header className="header">
         <h1>{userData?.firstname}'s Profile</h1>
       </header>
 
       <div className="profile-container">
-        <div>
-          <div className="profile-image">
-            <img
-              src={
-                userData?.avatarUrl
-                  ? userData?.avatarUrl
-                  : "https://gravatar.com/avatar/4e61ea87b10cdb2593aa622f811a65c6?s=400&d=robohash&r=x"
-              }
-              alt=""
-            />
+        <div className="profile-image">
+          <img
+            src={
+              userData?.avatarUrl
+                ? userData?.avatarUrl
+                : "https://gravatar.com/avatar/4e61ea87b10cdb2593aa622f811a65c6?s=400&d=robohash&r=x"
+            }
+            alt=""
+          />
+        </div>
+
+        <div className="user-details">
+          <div>
+            <strong>
+              {userData?.firstname} {userData?.lastname}
+            </strong>
           </div>
-          <div className="profile-details">
-            <span>
-              <strong>
-                {userData?.firstname} {userData?.lastname}
-              </strong>
-            </span>
+          <div className="username">@{userData?.username}</div>
+        </div>
+
+        <div className="user-bio-container" >
+          <p className="bio">{userData?.bio}</p>
+          <span  className="bio">
+            {userData?.website ? userData?.website : "No Links provided"}
+          </span>
+        </div>
+
+        <div className="user-follow-container">
+          <div className="child1">
+            <div  className="unit">
+              {userData?.following?.length} 
+              </div>
+            <div className="unit">{profileBasedPosts.length > 0 ? profileBasedPosts.length : 0} 
+            </div>
+            <div className="unit">{userData?.followers?.length} </div>
+            {/* Following : {userData?.following?.length} */}
+            </div>
+            <div className="child2">
+            <div>Following </div>
+            <div>Posts </div>
+            <div>Followers </div>
+            </div>
+       
+        </div>
+        {userData?.username === userInfo.username && (
+          <button className="edit-modal-button" onClick={openModal}>
+            Edit
+          </button>
+        )}
+        {modal && (
+          <Modal closeModal={closeModal} setModal={setModal} user={userData} />
+        )} 
+        </div>
+        {/* <div className="profile-details">
+         
             <br />
             <span>@{userData?.username}</span>
             <br />
             <span>
               {userData?.website ? userData?.website : "No Links provided"}
             </span>
-          </div>
-        </div>
+          </div> */}
 
-        <span>Following : {userData?.following?.length}</span>
+        {/* <span>Following : {userData?.following?.length}</span>
         <br />
         <span>Followers : {userData?.followers?.length}</span>
         <br />
@@ -89,8 +123,8 @@ const Profile = () => {
           {profileBasedPosts?.length > 1 ? "Posts" : "Post"} :{" "}
           {profileBasedPosts?.length}
         </span>
-        <br />
-        {userData?.username === userInfo.username && (
+        </div> */}
+        {/* {userData?.username === userInfo.username && (
           <button className="edit-modal-button" onClick={openModal}>
             Edit
           </button>
@@ -98,14 +132,14 @@ const Profile = () => {
 
         {modal && (
           <Modal closeModal={closeModal} setModal={setModal} user={userData} />
-        )}
+        )} */}
 
         {/* User Profile Post section */}
-        <div className="profile-posts">
-          {profileBasedPosts?.map((post, index) => (
-            <Card key={index} post={post} />
-          ))}
-        </div>
+ 
+      <div className="profile-posts">
+        {profileBasedPosts?.map((post, index) => (
+          <Card key={index} post={post} />
+        ))}
       </div>
     </div>
   );

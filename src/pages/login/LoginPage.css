@@ -45,7 +45,7 @@
     border-radius: 4px;
   }
 
-  .form-group button {
+  .form-group-btns button{
     background-color: #4caf50;
     color: #ffffff;
     padding: 10px;
@@ -57,6 +57,7 @@
     
   }
 
-  .form-group button:hover {
+  .form-group-btns  button:hover {
     background-color: #45a049;
   }
+

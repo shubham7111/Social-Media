@@ -6,13 +6,12 @@ import { formatDate } from "../utils/authUtils";
  * */
 
 export const posts = [
-  
   {
     _id: "c47f5d9e-1f67-4c9a-a2ab-132a7c92c554",
     content:
       "Just finished working on a new frontend project. Excited to launch🚀 it soon!",
     mediaURL:
-    "https://th.bing.com/th/id/OIP.m4bRYb_oIIaqailfr3L6ygHaEK?pid=ImgDet&rs=1",
+      "https://th.bing.com/th/id/OIP.m4bRYb_oIIaqailfr3L6ygHaEK?pid=ImgDet&rs=1",
     likes: {
       likeCount: 10,
       likedBy: [],
@@ -39,8 +38,9 @@ export const posts = [
   {
     _id: "4ff5dcfa-1a45-45bc-9d9a-3286c10dc8e3",
     content:
-      "Life is a beautiful journey filled with ups and downs,  twists and turns, and countless moments that shape who we are. It's a canvas upon which we paint our dreams, hopes, and aspirations."
-   , mediaURL: "https://th.bing.com/th/id/OIP.a-IUaPoVss9_LHTk5y4xEwHaEO?pid=ImgDet&rs=1",
+      "Life is a beautiful journey filled with ups and downs,  twists and turns, and countless moments that shape who we are. It's a canvas upon which we paint our dreams, hopes, and aspirations.",
+    mediaURL:
+      "https://th.bing.com/th/id/OIP.a-IUaPoVss9_LHTk5y4xEwHaEO?pid=ImgDet&rs=1",
     likes: {
       likeCount: 20,
       likedBy: [],
@@ -50,15 +50,13 @@ export const posts = [
       {
         _id: "d4c40a4d-7800-4ad4-8d1e-8f1375e9ad43",
         username: "sophieclark",
-        avatarUrl:
-        "https://impulse.aarafacademy.com/uploads/samples/g1.jpg",
-         text:
-          "Such profound and inspiring words! Thank you for this beautiful thread!",
+        avatarUrl: "https://impulse.aarafacademy.com/uploads/samples/g1.jpg",
+        text: "Such profound and inspiring words! Thank you for this beautiful thread!",
         votes: {
           upvotedBy: [],
           downvotedBy: [],
         },
-      }
+      },
     ],
     username: "shwetaj",
     createdAt: new Date("12/05/2021"),
@@ -80,8 +78,7 @@ export const posts = [
         username: "bobsmith",
         avatarUrl:
           "https://res.cloudinary.com/dptfwcnro/image/upload/v1685595771/SocialBuzz/247-2479526_round-profile-picture-png-transparent-png_ukpjxm.png",
-        text:
-          "Absolutely! Small acts of kindness can make a big difference✨ in someone's day. Let's make the world a better place!",
+        text: "Absolutely! Small acts of kindness can make a big difference✨ in someone's day. Let's make the world a better place!",
         votes: {
           upvotedBy: [],
           downvotedBy: [],
@@ -90,10 +87,8 @@ export const posts = [
       {
         _id: "c37e0491-df4e-4cfd-9b50-8c0e69c012c5",
         username: "jameswilson",
-        avatarUrl:
-          "https://impulse.aarafacademy.com/uploads/samples/g1.jpg",
-           text:
-          "Kindness is contagious!✨ Let's create a ripple effect of positivity and compassion.",
+        avatarUrl: "https://impulse.aarafacademy.com/uploads/samples/g1.jpg",
+        text: "Kindness is contagious!✨ Let's create a ripple effect of positivity and compassion.",
         votes: {
           upvotedBy: [],
           downvotedBy: [],
@@ -108,13 +103,14 @@ export const posts = [
     _id: "a7e9dd2d-48a4-4f6c-86de-6fc02a67c8a5",
     content:
       "Exploring new web design trends. Can't wait to implement them in my next project! 😃🚀",
-    mediaURL: "https://th.bing.com/th/id/OIP.4ttSBLTYgKLLfcDvM5wbuAHaE8?pid=ImgDet&rs=1",
+    mediaURL:
+      "https://th.bing.com/th/id/OIP.4ttSBLTYgKLLfcDvM5wbuAHaE8?pid=ImgDet&rs=1",
     likes: {
       likeCount: 50,
       likedBy: [],
       dislikedBy: [],
     },
-  
+
     comments: [
       {
         _id: "625f0ab2-ec68-4c68-8a75-82e67431d112",
@@ -122,8 +118,7 @@ export const posts = [
         avatarUrl:
           "https://res.cloudinary.com/dptfwcnro/image/upload/v1685595740/SocialBuzz/images_zrbwa3.jpg",
         website: "https://emmadavis.com/",
-        text:
-          "I love experimenting with design too. Let's exchange ideas sometime! 💡💭",
+        text: "I love experimenting with design too. Let's exchange ideas sometime! 💡💭",
         votes: {
           upvotedBy: [],
           downvotedBy: [],
@@ -164,7 +159,7 @@ export const posts = [
     updatedAt: formatDate(),
   },
   //following -> [{user1},{user2}]
-    //const followedUserPost(array) = post.filter((item) => currentUser.following.some({username}) => username === item.username )
+  //const followedUserPost(array) = post.filter((item) => currentUser.following.some({username}) => username === item.username )
   {
     _id: "d7c8e1b5-8f91-4d10-a68e-1683c8755cc3",
     content: "Adventures await! 🌄✨",
@@ -175,7 +170,7 @@ export const posts = [
       likedBy: [],
       dislikedBy: [],
     },
-///post.likes.likedby.find(({id})=> userInfo._id ) --> "red" --> liek ka logic
+    ///post.likes.likedby.find(({id})=> userInfo._id ) --> "red" --> liek ka logic
     comments: [
       {
         _id: "e685c9e9-30e7-4d41-91c1-48f6e12d9f85",
@@ -187,9 +182,9 @@ export const posts = [
           upvotedBy: [],
           downvotedBy: [],
         },
-            username: "chhakulizingare",
-    createdAt: new Date("10/02/2021"),
-    updatedAt: formatDate(),
+        username: "chhakulizingare",
+        createdAt: new Date("10/02/2021"),
+        updatedAt: formatDate(),
       },
       {
         _id: "f34059b3-11d5-4a1d-936f-9e23dabf67f0",
@@ -218,7 +213,7 @@ export const posts = [
       likedBy: [],
       dislikedBy: [],
       avatarUrl:
-      "https://res.cloudinary.com/dptfwcnro/image/upload/v1685515809/SocialBuzz/photo_pd6e7o.jpg",
+        "https://res.cloudinary.com/dptfwcnro/image/upload/v1685515809/SocialBuzz/photo_pd6e7o.jpg",
     },
     comments: [
       {
@@ -255,8 +250,7 @@ export const posts = [
         avatarUrl:
           "https://res.cloudinary.com/dptfwcnro/image/upload/v1685595920/SocialBuzz/images_qynsis.jpg",
         website: "https://sophieclark.com/",
-        text:
-          "Your designs are always top-notch! Can't wait to see the final result. 👌🎨",
+        text: "Your designs are always top-notch! Can't wait to see the final result. 👌🎨",
         votes: {
           upvotedBy: [],
           downvotedBy: [],
@@ -267,7 +261,6 @@ export const posts = [
     createdAt: new Date("07/25/2022"),
     updatedAt: formatDate(),
   },
- 
 
   {
     _id: "1df2124f-1187-4963-8044-aaab4d8c5d17",
@@ -302,7 +295,8 @@ export const posts = [
   {
     _id: "d4e5f6g7-5i6j-7k8l-9m0n-1o2p3q4r5s6",
     content: "Just completed a challenging workout. Feeling energized! 💪💥",
-    mediaURL: "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/health/wp-content/uploads/2021/07/BestTimeToWorkout.jpeg.jpg",
+    mediaURL:
+      "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/health/wp-content/uploads/2021/07/BestTimeToWorkout.jpeg.jpg",
     likes: {
       likeCount: 20,
       likedBy: [],
@@ -327,8 +321,7 @@ export const posts = [
         avatarUrl:
           "https://res.cloudinary.com/dptfwcnro/image/upload/v1685595740/SocialBuzz/images_zrbwa3.jpg",
         website: "https://emmadavis.com/",
-        text:
-          "I need some motivation to get back into a fitness routine. Any tips? 🏋️‍♀️💪",
+        text: "I need some motivation to get back into a fitness routine. Any tips? 🏋️‍♀️💪",
         votes: {
           upvotedBy: [],
           downvotedBy: [],
@@ -371,14 +364,12 @@ export const posts = [
         avatarUrl:
           "https://res.cloudinary.com/dptfwcnro/image/upload/v1685596157/SocialBuzz/images_vrd6b5.jpg",
         website: "https://alicejohnson.com/",
-        text:
-          "I love exploring new places! Any recommendations for must-visit spots? 🌇",
+        text: "I love exploring new places! Any recommendations for must-visit spots? 🌇",
         votes: {
           upvotedBy: [],
           downvotedBy: [],
         },
-      }
-     
+      },
     ],
     username: "olivertaylor",
     createdAt: new Date("07/05/2021"),
@@ -401,8 +392,7 @@ export const posts = [
         username: "bobsmith",
         avatarUrl:
           "https://res.cloudinary.com/dptfwcnro/image/upload/v1685595771/SocialBuzz/247-2479526_round-profile-picture-png-transparent-png_ukpjxm.png",
-        text:
-          "Conferences are a great way to gain new insights. Which conference was it? 🎙️",
+        text: "Conferences are a great way to gain new insights. Which conference was it? 🎙️",
         votes: {
           upvotedBy: [],
           downvotedBy: [],
@@ -414,8 +404,7 @@ export const posts = [
         avatarUrl:
           "https://res.cloudinary.com/dptfwcnro/image/upload/v1685595800/SocialBuzz/images_wxjv0c.jpg",
         website: "https://jameswilson.com/",
-        text:
-          "I'm always on the lookout for professional development opportunities. Any recommendations? 📊👨‍💼",
+        text: "I'm always on the lookout for professional development opportunities. Any recommendations? 📊👨‍💼",
         votes: {
           upvotedBy: [],
           downvotedBy: [],

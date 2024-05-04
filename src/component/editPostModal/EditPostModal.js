@@ -6,7 +6,7 @@ import { TbLetterX } from "react-icons/tb";
 
 const EditPostModal = ({ showClose, post }) => {
   const { editPost } = useContext(ExploreKey);
-  console.log(post);
+  // console.log(post);
   const inputRef = useRef();
   const closeModalHandler = (e) => {
     if (
@@ -69,7 +69,12 @@ const EditPostModal = ({ showClose, post }) => {
             <div>
               {input.mediaURL ? (
                 <div>
-                  <img src={input.mediaURL} />
+                  <img className="post-image-create-modal"    style={{
+                    height: "100px",
+                    width: "100px",
+                    marginLeft: "20px",
+                  }}   
+                  src={input.mediaURL} />
                   <TbLetterX size={20} onClick={setUpdatedPostImageHandler} />
                 </div>
               ) : (
@@ -88,7 +93,7 @@ const EditPostModal = ({ showClose, post }) => {
                 </div>
               )}
             </div>
-            <button onClick={clickHandler}>Update</button>
+            <button className="btn" onClick={clickHandler}>Update</button>
           </form>
         </div>
       </div>

@@ -10,6 +10,7 @@
   border: none;
   justify-content: space-around;
   flex-wrap: wrap;
+
   /* box-shadow: 4px 3px 8px 1px #969696; */
 }
 .user-container .userdetails-child-1 {

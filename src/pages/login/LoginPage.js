@@ -46,7 +46,7 @@ const LoginPage = () => {
         <h2>Login</h2>
         <form className="login-form">
           <div className="form-group">
-            <label for="username">Username:</label>
+            {/* <label for="username">Username:</label> */}
             <input
               type="text"
               placeholder="username"
@@ -55,7 +55,7 @@ const LoginPage = () => {
             />
           </div>
           <div className="form-group">
-            <label for="password">Password:</label>
+            {/* <label for="password">Password:</label> */}
             <input
               type="password"
               placeholder="password"
@@ -63,16 +63,14 @@ const LoginPage = () => {
               onChange={loginDetailSetter}
             />
           </div>
-          <div className="form-group">
+          <div className="form-group-btns">
             <button type="submit" onClick={loginButtonHandler}>
               Login{" "}
             </button>
             <button type="submit" onClick={loginGuestHandler}>
               Login As Guest
             </button>
-            <button type="submit" onClick={logoutGuestHandler}>
-              Logout{" "}
-            </button>
+            
           </div>
           <div className="form-group">
             <NavLink to="/signup" className="link">

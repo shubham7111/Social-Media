@@ -33,12 +33,19 @@ signUpHandler(userSignUpDetails)
     <div className='signup-container'>
     <form className = 'signup-form' onSubmit={prevendata}>
         <div>
-            <label className='label'>First Name : <input className='signup-input' required placeholder="First Name" type = "text" name = "firstname" onChange={setInputHandler} /> </label>
-            <label className='label'> Last Name : <input className='signup-input' required placeholder="Last Name" type =  "text" name = "lastname" onChange={setInputHandler} /></label>
-            <label className='label'> E-Mail : <input className='signup-input' required placeholder="E-mail" type =  "text" name = "email" onChange={setInputHandler} /></label>
-            <label className='label'> Username : <input className='signup-input' required placeholder="Username" type =  "text" name = "username" onChange={setInputHandler} /></label>
-            <label className='label'> Password : <input className='signup-input' required placeholder="Password" type =  "password" name = "password" onChange={setInputHandler} /></label>
-            <label className='label'> Confirm Password : <input className='signup-input' required placeholder="Confirm Password" type =  "password" name = "confirmpassword" onChange={setInputHandler} /></label>
+       
+             <input className='signup-input' required placeholder="First Name" type = "text" name = "firstname" onChange={setInputHandler} /> 
+           
+             <input className='signup-input' required placeholder="Last Name" type =  "text" name = "lastname" onChange={setInputHandler} />
+      
+             <input className='signup-input' required placeholder="E-mail" type =  "text" name = "email" onChange={setInputHandler} />
+           
+             <input className='signup-input' required placeholder="Username" type =  "text" name = "username" onChange={setInputHandler} />
+           
+             <input className='signup-input' required placeholder="Password" type =  "password" name = "password" onChange={setInputHandler} />
+            
+             <input className='signup-input' required placeholder="Confirm Password" type =  "password" name = "confirmpassword" onChange={setInputHandler} />
+      
         </div>
         <button type="submit" id="submitBtn" className="submitBtn" onClick = {submitHandler}>submit</button>
         <div className='form-group'>

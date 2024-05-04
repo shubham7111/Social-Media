@@ -1,6 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-import { PostUserSection } from "../postUserSection/PostUserSection";
-import { AiFillLike } from "react-icons/ai";
 import { BsFillBookmarkFill } from "react-icons/bs";
 import { ExploreKey } from "../../context/ExploreContext";
 import EditPostModal from "../editPostModal/EditPostModal";
@@ -14,11 +12,11 @@ export const Card = ({ post }) => {
   const {
     getPost,
     deletePost,
-    state: { posts },
+    state: { posts , bookmark },
     likedPost,
     isLiked,
     unLikedPost,
-    isBookmark,
+ 
     bookmarkPost,
     unBookmarkPost,
     bookMarkPostHandler,
@@ -33,30 +31,20 @@ export const Card = ({ post }) => {
   const openMenu = () => setMenu(true);
   const closeMenu = () => setMenu(false);
   const [modal, setModal] = useState(false);
-  // const [userProfileData, setUserProfileData] = useState({})
-  // const [menu, setMenu] = useState(false)
-  // const openMenu = () => setMenu(true)
-  // const closeMenu = () => setMenu(false)
 
   const openModal = () => {
     setModal(true);
   };
   const closeModal = () => {
     setModal(false);
+    setMenu(false)
   };
-  // const deletePostHandler = () =>{
-
-  //     deletePost(post)
-  // }
+ 
   const editPostHandler = (e, post) => {
     e.preventDefault();
     openModal();
   };
-  // const finalReponse = () =>  {users?.find((user) => user.username === post?.username)
-  //     setUserProfileData(finalReponse)}
-  // useEffect (() => {
 
-  // }, [post.username])
   const getDate = (data) => {
     return new Date(data).toLocaleDateString("en-US", {
       day: "numeric",
@@ -68,22 +56,24 @@ export const Card = ({ post }) => {
     deletePost(post);
     // delete the shit post
   };
-  // const editPost = (e, data) => {
-  //   //edit logic
-  // };
+
   const likePostHandler = (e) => {};
   const UnlikePostHandler = (e) => {};
   const user = users?.find((user) => user.username === post?.username);
 
-  console.log(user);
 
-  const isBookMarked = () => {};
+  const isBookmark = (postId) => {
+
+    console.log(bookmark?.some((post) => post._id === postId))
+    return bookmark?.some((post)=>post?._id === postId)
+}
   return (
     <div>
       <div className="post-container">
         {/* card Logic - Parent -{display - flex , direction :column} */}
         {/* card-top section */}
         <div className="card-child1">
+
           {/* div 1 - for image */}
           <div className="User-profile-picture">
             {" "}
@@ -155,7 +145,7 @@ export const Card = ({ post }) => {
             )}
           </span>
           <span className="icon" onClick={() => bookMarkPostHandler(post)}>
-            {isBookMarked(post) ? (
+            {isBookmark(post) ? (
               <BsFillBookmarkFill size={18} />
             ) : (
               <BsBookmark size={18} />

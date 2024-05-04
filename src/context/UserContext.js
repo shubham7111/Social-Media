@@ -122,7 +122,7 @@ export const UserContext = ({ children }) => {
       const response = await fetch(`/api/posts/user/${username}`);
       if (response.status === 200 || response.status === 201) {
         const res = await response.json();
-        //console.log(res)
+        console.log(res ,"for posts count")
         //const { posts } = await response.json();
         //console.log(posts)
         //userDispatch({ type: "FILTER-PROFILE-BASED-POSTS" });

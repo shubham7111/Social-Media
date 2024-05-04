@@ -26,10 +26,12 @@ const Feed = () => {
     <div className="cards-parent">
       <h1>This is Feed Page</h1>
 
-      {feedPosts?.map((post, index) => (
+      {feedPosts?.length >0 && feedPosts?.map((post, index) => (
         <Card post={post} key={index} />
       ))}
+     
     </div>
+
   );
 };
 
