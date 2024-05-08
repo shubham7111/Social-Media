@@ -20,7 +20,7 @@ export const posts = [
     comments: [
       {
         _id: "fa8d92a3-23bb-4cda-af50-8f15430806e9",
-        username: "bobsmith",
+        username: "adarshbalika",
         avatarUrl:
           "https://res.cloudinary.com/dptfwcnro/image/upload/v1685595771/SocialBuzz/247-2479526_round-profile-picture-png-transparent-png_ukpjxm.png",
         text: "Great work!🚀 Can't wait to see the final product.",
@@ -30,7 +30,7 @@ export const posts = [
         },
       },
     ],
-    username: "alicejohnson",
+    username: "shubhamkarmokar",
     createdAt: new Date("07/04/2021"),
     updatedAt: formatDate(),
   },
@@ -49,7 +49,7 @@ export const posts = [
     comments: [
       {
         _id: "d4c40a4d-7800-4ad4-8d1e-8f1375e9ad43",
-        username: "sophieclark",
+        username: "markzuckerberg",
         avatarUrl: "https://impulse.aarafacademy.com/uploads/samples/g1.jpg",
         text: "Such profound and inspiring words! Thank you for this beautiful thread!",
         votes: {
@@ -75,7 +75,7 @@ export const posts = [
     comments: [
       {
         _id: "a2517e3e-4b6e-4b4b-9d4d-1e0b159a465e",
-        username: "bobsmith",
+        username: "adarshbalika",
         avatarUrl:
           "https://res.cloudinary.com/dptfwcnro/image/upload/v1685595771/SocialBuzz/247-2479526_round-profile-picture-png-transparent-png_ukpjxm.png",
         text: "Absolutely! Small acts of kindness can make a big difference✨ in someone's day. Let's make the world a better place!",
@@ -114,10 +114,10 @@ export const posts = [
     comments: [
       {
         _id: "625f0ab2-ec68-4c68-8a75-82e67431d112",
-        username: "emmadavis",
+        username: "jeffbezos",
         avatarUrl:
           "https://res.cloudinary.com/dptfwcnro/image/upload/v1685595740/SocialBuzz/images_zrbwa3.jpg",
-        website: "https://emmadavis.com/",
+        website: "https://jeffbezos.com/",
         text: "I love experimenting with design too. Let's exchange ideas sometime! 💡💭",
         votes: {
           upvotedBy: [],
@@ -125,7 +125,7 @@ export const posts = [
         },
       },
     ],
-    username: "bobsmith",
+    username: "adarshbalika",
     createdAt: new Date("06/05/2021"),
     updatedAt: formatDate(),
   },
@@ -154,7 +154,7 @@ export const posts = [
         },
       },
     ],
-    username: "emmadavis",
+    username: "jeffbezos",
     createdAt: new Date("07/06/2022"),
     updatedAt: formatDate(),
   },
@@ -188,7 +188,7 @@ export const posts = [
       },
       {
         _id: "f34059b3-11d5-4a1d-936f-9e23dabf67f0",
-        username: "emmadavis",
+        username: "jeffbezos",
         avatarUrl:
           "https://res.cloudinary.com/dptfwcnro/image/upload/v1685595740/SocialBuzz/images_zrbwa3.jpg",
         text: "Where is this place? It looks incredible🌈👏!",
@@ -246,10 +246,10 @@ export const posts = [
     comments: [
       {
         _id: "59da5de9-0e68-4cc1-b9de-70e94784e1d7",
-        username: "sophieclark",
+        username: "markzuckerberg",
         avatarUrl:
           "https://res.cloudinary.com/dptfwcnro/image/upload/v1685595920/SocialBuzz/images_qynsis.jpg",
-        website: "https://sophieclark.com/",
+        website: "https://markzuckerberg.com/",
         text: "Your designs are always top-notch! Can't wait to see the final result. 👌🎨",
         votes: {
           upvotedBy: [],
@@ -257,7 +257,7 @@ export const posts = [
         },
       },
     ],
-    username: "lilyanderson",
+    username: "elonmusk",
     createdAt: new Date("07/25/2022"),
     updatedAt: formatDate(),
   },
@@ -276,10 +276,10 @@ export const posts = [
     comments: [
       {
         _id: "1e141d4e-02a1-44f6-9ab9-d2bb63b523f1",
-        username: "emmadavis",
+        username: "jeffbezos",
         avatarUrl:
           "https://res.cloudinary.com/dptfwcnro/image/upload/v1685595740/SocialBuzz/images_zrbwa3.jpg",
-        website: "https://emmadavis.com/",
+        website: "https://jeffbezos.com/",
         text: "You're such an inspiration! Keep up the great work. 👏💯",
         votes: {
           upvotedBy: [],
@@ -287,7 +287,7 @@ export const posts = [
         },
       },
     ],
-    username: "sophieclark",
+    username: "markzuckerberg",
     createdAt: new Date("2/22/2022"),
     updatedAt: formatDate(),
   },
@@ -305,10 +305,10 @@ export const posts = [
     comments: [
       {
         _id: "e5f6g7h8-6j7k-8l9m-0n1o-2p3q4r5s6t7",
-        username: "lilyanderson",
+        username: "elonmusk",
         avatarUrl:
           "https://res.cloudinary.com/dptfwcnro/image/upload/v1685595837/SocialBuzz/images_b9qohl.jpg",
-        website: "https://lilyanderson.com/",
+        website: "https://elonmusk.com/",
         text: "Great job! Working out is so important for our well-being. 👍",
         votes: {
           upvotedBy: [],
@@ -317,10 +317,10 @@ export const posts = [
       },
       {
         _id: "f6g7h8i9-8l9m-0n1o-2p3q-4r5s6t7u8v9",
-        username: "emmadavis",
+        username: "jeffbezos",
         avatarUrl:
           "https://res.cloudinary.com/dptfwcnro/image/upload/v1685595740/SocialBuzz/images_zrbwa3.jpg",
-        website: "https://emmadavis.com/",
+        website: "https://jeffbezos.com/",
         text: "I need some motivation to get back into a fitness routine. Any tips? 🏋️‍♀️💪",
         votes: {
           upvotedBy: [],
@@ -328,7 +328,7 @@ export const posts = [
         },
       },
     ],
-    username: "sophieclark",
+    username: "markzuckerberg",
     createdAt: new Date("09/02/2021"),
     updatedAt: formatDate(),
   },
@@ -343,7 +343,7 @@ export const posts = [
       dislikedBy: [],
     },
     comments: [],
-    username: "lilyanderson",
+    username: "elonmusk",
     createdAt: new Date("07/28/2021"),
     updatedAt: formatDate(),
   },
@@ -371,7 +371,7 @@ export const posts = [
         },
       },
     ],
-    username: "olivertaylor",
+    username: "billgates",
     createdAt: new Date("07/05/2021"),
     updatedAt: formatDate(),
   },
@@ -389,7 +389,7 @@ export const posts = [
     comments: [
       {
         _id: "l2m3n4o5-4p5q-6r7s-8t9u-0v1w2x3y4z5",
-        username: "bobsmith",
+        username: "adarshbalika",
         avatarUrl:
           "https://res.cloudinary.com/dptfwcnro/image/upload/v1685595771/SocialBuzz/247-2479526_round-profile-picture-png-transparent-png_ukpjxm.png",
         text: "Conferences are a great way to gain new insights. Which conference was it? 🎙️",
@@ -411,7 +411,7 @@ export const posts = [
         },
       },
     ],
-    username: "emmadavis",
+    username: "jeffbezos",
     createdAt: new Date("07/02/2023"),
     updatedAt: formatDate(),
   },
@@ -426,7 +426,7 @@ export const posts = [
       dislikedBy: [],
     },
     comments: [],
-    username: "lilyanderson",
+    username: "elonmusk",
     createdAt: new Date("06/15/2023"),
     updatedAt: formatDate(),
   },

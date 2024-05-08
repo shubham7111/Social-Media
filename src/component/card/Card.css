@@ -80,7 +80,9 @@
 .user-details-info {
   width: fit-content;
 }
-
+.User-profile-picture {
+  cursor: pointer;
+}
 /* to bring the three dots at right side of top div */
 /* 1.   position: relative; to parent */
 .card-child1 {

@@ -14,8 +14,8 @@ import { formatDate } from "../utils/authUtils";
 export const users = [
   {
     _id: 2,
-    firstname: "Raj",
-    lastname: "Kumar",
+    firstname: "Adarsh",
+    lastname: "Balika",
     username: "adarshbalika",
     password: "adarshBalika123",
     bio: "Frontend Developer 💻✨Turning ideas into beautiful and interactive websites✨🚀",
@@ -36,7 +36,7 @@ export const users = [
         createdAt: "2022-01-01T10:55:06+05:30",
         updatedAt: formatDate(),
         avatarUrl:
-          "https://res.cloudinary.com/dsgfp68qe/image/upload/v1709470499/tqwlnbrwjnppkjntte5k.jpg",
+          "https://res-console.cloudinary.com/dsgfp68qe/thumbnails/v1/image/upload/v1709470499/dHF3bG5icndqbnBwa2pudHRlNWs=/template_primary/Y19jcm9wLGFyXzE6MQ==",
       },
       {
         _id: 4,
@@ -69,6 +69,8 @@ export const users = [
 
     createdAt: "2022-01-01T10:55:06+05:30",
     updatedAt: formatDate(),
+    avatarUrl:
+      "https://res.cloudinary.com/dsgfp68qe/image/upload/c_crop,ar_1:1/v1709470499/tqwlnbrwjnppkjntte5k.jpg ",
     followers: [
       {
         _id: 2,
@@ -84,8 +86,6 @@ export const users = [
           "https://i.pinimg.com/originals/22/04/a8/2204a80672494b512d779aa3fe119744.jpg",
       },
     ],
-    avatarUrl:
-      "https://1fid.com/wp-content/uploads/2022/06/cartoon-profile-picture-6-1024x1024.jpg",
   },
 
   {

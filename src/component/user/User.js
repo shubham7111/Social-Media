@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { UserKey } from "../../context/UserContext";
 import { useNavigate } from "react-router-dom";
 import { AuthKey } from "../../context/AuthContext";
+import "./User.css";
 
 export const User = ({ user }) => {
   const { followUser, unFollowUser, state } = useContext(UserKey);

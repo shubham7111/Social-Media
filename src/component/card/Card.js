@@ -8,15 +8,18 @@ import { AiOutlineLike, AiTwotoneLike } from "react-icons/ai";
 import { BsThreeDotsVertical, BsBookmark } from "react-icons/bs";
 import { UserKey } from "../../context/UserContext";
 import { AuthKey } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
+
 export const Card = ({ post }) => {
+  const navigate = useNavigate();
   const {
     getPost,
     deletePost,
-    state: { posts , bookmark },
+    state: { posts, bookmark },
     likedPost,
     isLiked,
     unLikedPost,
- 
+
     bookmarkPost,
     unBookmarkPost,
     bookMarkPostHandler,
@@ -37,9 +40,9 @@ export const Card = ({ post }) => {
   };
   const closeModal = () => {
     setModal(false);
-    setMenu(false)
+    setMenu(false);
   };
- 
+
   const editPostHandler = (e, post) => {
     e.preventDefault();
     openModal();
@@ -61,26 +64,31 @@ export const Card = ({ post }) => {
   const UnlikePostHandler = (e) => {};
   const user = users?.find((user) => user.username === post?.username);
 
-
   const isBookmark = (postId) => {
-
-    console.log(bookmark?.some((post) => post._id === postId))
-    return bookmark?.some((post)=>post?._id === postId)
-}
+    console.log(bookmark?.some((post) => post._id === postId));
+    return bookmark?.some((post) => post?._id === postId);
+  };
   return (
     <div>
       <div className="post-container">
         {/* card Logic - Parent -{display - flex , direction :column} */}
         {/* card-top section */}
         <div className="card-child1">
-
           {/* div 1 - for image */}
           <div className="User-profile-picture">
             {" "}
-            <img className="user-profile-img" src={user?.avatarUrl} alt="No" />
+            <img
+              className="user-profile-img"
+              src={user?.avatarUrl}
+              alt="No"
+              onClick={() => navigate(`/profile/user/${user?.username}`)}
+            />
           </div>
           {/* div 2 - for details */}
-          <div className="user-details-info">
+          <div
+            onClick={() => navigate(`/profile/user/${user?.username}`)}
+            className="user-details-info"
+          >
             <h4>
               {post?.firstName} {post?.lastName}
             </h4>
